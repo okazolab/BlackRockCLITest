@@ -121,6 +121,9 @@ public:
 
 		for (int i = 0; i < cbNUM_ANALOG_CHANS; i++)
 		{
+			/// ************************************
+			/// it always crashes with 0xc000005 inside of this loop, when the hardware is connected
+			/// ************************************
 			trial.samples[i] = malloc(cbSdk_CONTINUOUS_DATA_SAMPLES * sizeof(INT16));
 		}
 
