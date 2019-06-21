@@ -128,11 +128,7 @@ public:
 		}
 
 
-		cbSdkResult res1 = cbSdkInitTrialData(UnitIndex, 0, NULL, &trial, NULL, NULL);
-		for (int i = 0; i < cbNUM_ANALOG_CHANS; i++)
-		{
-			trial.samples[i] = malloc(trial.num_samples[i] * sizeof(INT16));
-		}
+		cbSdkResult res1 = cbSdkInitTrialData(UnitIndex, 1, NULL, &trial, NULL, NULL);	
 
 		cbSdkResult res = cbSdkGetTrialData(UnitIndex, 1, NULL, &trial, NULL, NULL);
 

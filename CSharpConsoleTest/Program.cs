@@ -14,11 +14,12 @@ namespace CSharpConsoleTest
             BREngine.Start();
             if (BREngine.StartAcquisition(5))
                 {                
+                Console.WriteLine("Press any key to stop"); 
                 while (!Console.KeyAvailable)
                     {                    
                     double[] Data = BREngine.GetData();
                     if (Data.Length>0)
-                        Console.WriteLine("Sample " + Data[0]);                    
+                        Console.WriteLine("First sample: " + Data[0]);                    
                     }
                 }
             BREngine.Stop();
