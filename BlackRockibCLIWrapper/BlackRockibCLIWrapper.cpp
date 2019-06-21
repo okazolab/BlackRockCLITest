@@ -37,8 +37,6 @@ public:
 		cbSdkConnectionType T;
 		cbSdkInstrumentType I;
 
-
-
 		//cbSdkResult res1 = cbSdkGetType(0, &T, &I);
 		cbSdkResult res = cbSdkOpen(UnitIndex, CBSDKCONNECTION_DEFAULT);
 		cbSdkResult res2 = cbSdkGetType(UnitIndex, &T, &I);
@@ -113,9 +111,7 @@ public:
 
 
 	array<double>^ BlackRockEngine::GetData()//[Out] array<int>^ SampleCounter)
-	{
-		int j = 0;
-		j = j + 1;
+	{		
 		cbSdkTrialCont trial;
 		trial.time = 0;
 
